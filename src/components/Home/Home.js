@@ -1,3 +1,9 @@
+import { PersonagensList } from "../PersonagensList/PersonagensList";
+
 export function Home() {
-    return <div>Home</div>;
+    return (
+        <div>
+            <PersonagensList></PersonagensList>
+        </div>
+    );
 }
