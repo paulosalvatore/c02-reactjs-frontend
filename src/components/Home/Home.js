@@ -1,3 +1,4 @@
+import React from "react";
 import { PersonagensList } from "../PersonagensList/PersonagensList";
 
 export function Home() {
