@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function PersonagensCard({ personagem }) {
+    // export default function PersonagensCard(props) {
     // const personagem = props.personagem;
     // const { personagem } = props;
 
