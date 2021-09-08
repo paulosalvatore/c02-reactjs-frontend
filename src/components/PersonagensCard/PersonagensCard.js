@@ -1,5 +1,13 @@
 import React from "react";
 
-export default function PersonagensCard() {
-    return <div>PersonagensCard</div>;
+export default function PersonagensCard({ personagem }) {
+    // const personagem = props.personagem;
+    // const { personagem } = props;
+
+    return (
+        <div className="card">
+            <h1 className="card__title">{personagem.nome}</h1>
+            <img src={personagem.imagemUrl} alt={personagem.nome} width="200" />
+        </div>
+    );
 }

@@ -1,3 +1,4 @@
+import PersonagensCard from "../PersonagensCard/PersonagensCard";
 import React from "react";
 import { useEffect, useState } from "react";
 import { Api } from "../../api/Api";
@@ -20,7 +21,10 @@ export function PersonagensList() {
     return (
         <div>
             {personagens.map((personagem, index) => (
-                <div key={"personagem_" + index}>{personagem.nome}</div>
+                <PersonagensCard
+                    personagem={personagem}
+                    key={"personagem_" + index}
+                ></PersonagensCard>
             ))}
         </div>
     );
