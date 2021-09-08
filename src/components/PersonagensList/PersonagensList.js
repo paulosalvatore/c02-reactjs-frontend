@@ -10,9 +10,7 @@ export function PersonagensList() {
 
             const bodyResult = await response.json();
 
-            const results = bodyResult.results;
-
-            setPersonagens(results);
+            setPersonagens(bodyResult);
         };
 
         loadData();
@@ -21,7 +19,7 @@ export function PersonagensList() {
     return (
         <div>
             {personagens.map((personagem, index) => (
-                <div key={"personagem_" + index}>{personagem.name}</div>
+                <div key={"personagem_" + index}>{personagem.nome}</div>
             ))}
         </div>
     );

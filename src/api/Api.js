@@ -1,9 +1,9 @@
 export const Api = {
     // Base URL
-    baseUrl: "https://pokeapi.co/api/v2",
+    baseUrl: "http://localhost:3001",
 
     // Endpoints
-    readAllUrl: () => Api.baseUrl + "/pokemon",
+    readAllUrl: () => Api.baseUrl + "/personagem",
 
     // Funções de Requisição
 
