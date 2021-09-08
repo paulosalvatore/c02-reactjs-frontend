@@ -1,8 +1,9 @@
 // React
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 // Components
-import { Home } from "./components/Home/Home";
+import { Home } from "./pages/Home/Home";
 
 // CSS
 import "./App.css";

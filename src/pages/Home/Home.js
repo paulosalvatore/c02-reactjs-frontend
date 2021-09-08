@@ -1,5 +1,5 @@
 import React from "react";
-import { PersonagensList } from "../PersonagensList/PersonagensList";
+import { PersonagensList } from "../../components/PersonagensList/PersonagensList";
 
 export function Home() {
     return (
