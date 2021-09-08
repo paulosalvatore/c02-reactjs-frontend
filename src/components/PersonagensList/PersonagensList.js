@@ -19,7 +19,7 @@ export function PersonagensList() {
     }, []);
 
     return (
-        <div>
+        <div className="cards">
             {personagens.map((personagem, index) => (
                 <PersonagensCard
                     personagem={personagem}
