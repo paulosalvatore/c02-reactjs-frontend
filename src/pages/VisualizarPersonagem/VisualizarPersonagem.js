@@ -1,3 +1,4 @@
+import LinkButton from "components/utils/LinkButton";
 import React from "react";
 
 // CSS
@@ -7,10 +8,16 @@ export default function VisualizarPersonagem() {
     return (
         <div className="personagem">
             <div className="personagem__buttons buttons">
-                <button className="buttons__button">Editar</button>
-                <button className="buttons__button buttons__button--danger">
+                <LinkButton to="/editar/1" className="buttons__button">
+                    Editar
+                </LinkButton>
+
+                <LinkButton
+                    to="/remover/1"
+                    className="buttons__button buttons__button--danger"
+                >
                     Excluir
-                </button>
+                </LinkButton>
             </div>
 
             <div className="personagem__details-wrapper">
