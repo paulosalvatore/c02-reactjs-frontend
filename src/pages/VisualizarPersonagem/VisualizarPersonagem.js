@@ -22,7 +22,7 @@ export default function VisualizarPersonagem(props) {
         };
 
         loadData();
-    }, []);
+    }, [id]);
 
     if (!personagem) {
         return <div>Carregando...</div>;
