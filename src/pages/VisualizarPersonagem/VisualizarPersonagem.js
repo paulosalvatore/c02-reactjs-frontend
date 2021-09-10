@@ -1,5 +1,8 @@
 import React from "react";
 
+// CSS
+import "./VisualizarPersonagem.css";
+
 export default function VisualizarPersonagem() {
     return (
         <div className="personagem">
