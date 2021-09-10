@@ -7,11 +7,12 @@ export default function AdicionarPersonagem(props) {
 
         const nome = event.target.nome.value;
         const imagemUrl = event.target.imagemUrl.value;
+        const origemId = +event.target.origemId.value;
 
         const payload = {
             nome,
             imagemUrl,
-            origemId: 1,
+            origemId,
         };
 
         const response = await Api.buildApiPostRequest(
@@ -52,6 +53,18 @@ export default function AdicionarPersonagem(props) {
                     name="imagemUrl"
                     className="form__input"
                 />
+
+                <br />
+
+                <label htmlFor="origemId" className="form__label">
+                    Origem:
+                </label>
+                <br />
+
+                <select id="origemId" name="origemId">
+                    <option value="">Selecione uma opção</option>
+                    <option value="1">Earth (C-137)</option>
+                </select>
 
                 <br />
 
