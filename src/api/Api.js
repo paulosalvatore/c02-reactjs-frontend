@@ -4,6 +4,7 @@ export const Api = {
 
     // Endpoints
     readAllUrl: () => Api.baseUrl + "/personagem",
+    readByIdUrl: id => Api.baseUrl + "/personagem/" + id,
 
     // Funções de Requisição
 
