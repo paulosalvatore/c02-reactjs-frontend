@@ -1,7 +1,22 @@
 import { Api } from "api/Api";
 import React from "react";
+import { useEffect, useState } from "react";
 
 export default function AdicionarPersonagem(props) {
+    const [localizacoes, setLocalizacoes] = useState([]);
+
+    useEffect(() => {
+        const loadData = async () => {
+            const response = await Api.buildApiGetRequest(Api.readAllUrl());
+
+            const bodyResult = await response.json();
+
+            setLocalizacoes(bodyResult);
+        };
+
+        loadData();
+    }, []);
+
     const handleSubmit = async event => {
         event.preventDefault();
 
@@ -63,7 +78,15 @@ export default function AdicionarPersonagem(props) {
 
                 <select id="origemId" name="origemId">
                     <option value="">Selecione uma opção</option>
-                    <option value="1">Earth (C-137)</option>
+
+                    {localizacoes.map((localizacao, index) => (
+                        <option
+                            key={"localizacao_" + index}
+                            value={localizacao.id}
+                        >
+                            {localizacao.nome}
+                        </option>
+                    ))}
                 </select>
 
                 <br />

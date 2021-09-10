@@ -3,10 +3,17 @@ export const Api = {
     baseUrl: "http://localhost:3001",
 
     // Endpoints
+
+    // Personagem
+
     readAllUrl: () => Api.baseUrl + "/personagem",
     readByIdUrl: id => Api.baseUrl + "/personagem/" + id,
 
     createUrl: () => Api.baseUrl + "/personagem",
+
+    // Localização
+
+    readAllLocalizacaoUrl: () => Api.baseUrl + "/localizacao",
 
     // Funções de Requisição
 
