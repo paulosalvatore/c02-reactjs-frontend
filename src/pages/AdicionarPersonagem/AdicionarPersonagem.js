@@ -1,6 +1,7 @@
+import { Api } from "api/Api";
 import React from "react";
 
-export default function AdicionarPersonagem() {
+export default function AdicionarPersonagem(props) {
     const handleSubmit = async event => {
         event.preventDefault();
 
@@ -10,13 +11,17 @@ export default function AdicionarPersonagem() {
         const payload = {
             nome,
             imagemUrl,
+            origemId: 1,
         };
 
-        console.log(payload);
+        const response = await Api.buildApiPostRequest(
+            Api.createUrl(),
+            payload
+        );
 
-        // TODO: Requisição POST para a API
+        const bodyResult = await response.json();
 
-        // TODO: Redirecionar para página de visualização
+        props.history.push("/personagem/" + bodyResult.id);
     };
 
     return (
@@ -36,15 +41,15 @@ export default function AdicionarPersonagem() {
 
                 <br />
 
-                <label htmlFor="urlImagem" className="form__label">
+                <label htmlFor="imagemUrl" className="form__label">
                     URL da Imagem:
                 </label>
                 <br />
 
                 <input
                     type="text"
-                    id="urlImagem"
-                    name="urlImagem"
+                    id="imagemUrl"
+                    name="imagemUrl"
                     className="form__input"
                 />
 
