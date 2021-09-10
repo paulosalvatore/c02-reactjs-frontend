@@ -6,7 +6,10 @@ import { BrowserRouter } from "react-router-dom";
 
 // CSS
 import "./index.css";
+
+// Styles
 import "./styles/card.css";
+import "./styles/form.css";
 
 ReactDOM.render(
     <React.StrictMode>
