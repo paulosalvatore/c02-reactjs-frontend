@@ -13,6 +13,7 @@ export function Home() {
                     Adicionar
                 </LinkButton>
             </div>
+
             <PersonagensList></PersonagensList>
         </div>
     );
