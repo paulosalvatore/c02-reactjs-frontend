@@ -11,11 +11,12 @@ import VisualizarPersonagem from "pages/VisualizarPersonagem/VisualizarPersonage
 import AdicionarPersonagem from "pages/AdicionarPersonagem/AdicionarPersonagem";
 import EditarPersonagem from "pages/EditarPersonagem/EditarPersonagem";
 import RemoverPersonagem from "pages/RemoverPersonagem/RemoverPersonagem";
+import Header from "components/structure/Header";
 
 export function App() {
     return (
         <div className="App">
-            <header className="App-header">Personagens</header>
+            <Header />
 
             <div className="content">
                 <Switch>
