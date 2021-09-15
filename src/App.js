@@ -13,9 +13,10 @@ import EditarPersonagem from "pages/EditarPersonagem/EditarPersonagem";
 import RemoverPersonagem from "pages/RemoverPersonagem/RemoverPersonagem";
 import Header from "components/structure/Header";
 import GuardedRoute from "components/GuardedRoute/GuardedRoute";
+import Login from "pages/Login/Login";
 
 export function App() {
-    const isAuthenticated = true;
+    const isAuthenticated = Boolean(localStorage.getItem("JWT"));
 
     return (
         <div className="App">
@@ -24,6 +25,8 @@ export function App() {
             <div className="content">
                 <Switch>
                     <Route path="/" exact={true} component={Home} />
+
+                    <Route path="/login" component={Login} />
 
                     <GuardedRoute
                         path="/personagem/adicionar"

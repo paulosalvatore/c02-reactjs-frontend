@@ -11,6 +11,10 @@ export const Api = {
 
     createUrl: () => Api.baseUrl + "/personagem",
 
+    // Login
+
+    loginUrl: () => Api.baseUrl + "/login",
+
     // Localização
 
     readAllLocalizacaoUrl: () => Api.baseUrl + "/localizacao",
