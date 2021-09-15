@@ -12,8 +12,11 @@ import AdicionarPersonagem from "pages/AdicionarPersonagem/AdicionarPersonagem";
 import EditarPersonagem from "pages/EditarPersonagem/EditarPersonagem";
 import RemoverPersonagem from "pages/RemoverPersonagem/RemoverPersonagem";
 import Header from "components/structure/Header";
+import GuardedRoute from "components/GuardedRoute/GuardedRoute";
 
 export function App() {
+    const isAuthenticated = true;
+
     return (
         <div className="App">
             <Header />
@@ -22,9 +25,10 @@ export function App() {
                 <Switch>
                     <Route path="/" exact={true} component={Home} />
 
-                    <Route
+                    <GuardedRoute
                         path="/personagem/adicionar"
                         component={AdicionarPersonagem}
+                        auth={isAuthenticated}
                     />
 
                     <Route
