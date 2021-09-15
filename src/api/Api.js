@@ -19,12 +19,19 @@ export const Api = {
 
     readAllLocalizacaoUrl: () => Api.baseUrl + "/localizacao",
 
+    // Auth Header
+
+    authHeader: {
+        Authorization: "Bearer " + localStorage.getItem("JWT"),
+    },
+
     // Funções de Requisição
 
     // GET
-    buildApiGetRequest: url =>
+    buildApiGetRequest: (url, auth) =>
         fetch(url, {
             method: "GET",
+            headers: auth ? new Headers({ ...Api.authHeader }) : undefined,
         }),
 
     // POST

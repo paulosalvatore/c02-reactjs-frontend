@@ -8,7 +8,10 @@ export function PersonagensList() {
 
     useEffect(() => {
         const loadData = async () => {
-            const response = await Api.buildApiGetRequest(Api.readAllUrl());
+            const response = await Api.buildApiGetRequest(
+                Api.readAllUrl(),
+                true
+            );
 
             const bodyResult = await response.json();
 
